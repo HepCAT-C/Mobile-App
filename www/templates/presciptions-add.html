@@ -10,9 +10,6 @@
                     <label class="item item-input">
                         <input type="text" placeholder="Medicine Name" ng-required="true" ng-model="drug.name">
                     </label>
-                    <label class="item item-input">
-                        <input type="time" placeholder="-- : -- --" ng-model="drug.time">
-                    </label>
                     <div class="row">
                         <div class="col">
                             <ul class="toggle-btn-group">
@@ -47,22 +44,50 @@
                             </ul>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col">
+                            <input type="date" placeholder="From Date" ng-required="true" ng-model="drug.fromdate">
+                        </div>
+                        <div class="col">
+                            <input type="date" placeholder="To Date" ng-required="true" ng-model="drug.todate">
+                        </div>
+                    </div>
+                    <!--  <ion-item class="item-input item-select">
+    <div class="input-label" ng.model="drug.interval">
+      Select Frequency
+    </div>
+    <select>
+      <option selected>once a day</option>
+      <option>twice a day</option>
+       <option>twice a day</option>
+          </select>
+  </ion-item> -->
+                    <!--   <div class="padding">
+                        <input type="" placeholder="0">
+                    </div> -->
+                    <label class="item item-input">
+                        <input type="time" placeholder="-- : -- --" ng-model="drug.time">
+                    </label>
                     <!-- <div class="row">
                         <div class="col">
-                             <input type="checkbox" name="morning" id="morning" class="accessAid" ng-model="drug.week.morning" />
-                                    <label for="morning">Morning</label>
-                                </div>
-                                <div class="col">
-                                    <input type="checkbox" name="afternoon" id="afternoon" class="accessAid" ng-model="drug.week.afternoon" />
-                                    <label for="afternoon">Afternoon</label>
-                                </div>
-                                <div class="col">
-                                    <input type="checkbox" name="night" id="night" class="accessAid" ng-model="drug.week.night" />
-                                    <label for="night">Night</label>
-                                </div>
-                        </div> -->
+                            <input type="checkbox" name="morning" id="morning" class="accessAid" ng-model="drug.week.morning" />
+                            <label for="morning">Morning</label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" name="afternoon" id="afternoon" class="accessAid" ng-model="drug.week.afternoon" />
+                            <label for="afternoon">Afternoon</label>
+                        </div>
+                        <div class="col">
+                            <input type="checkbox" name="night" id="night" class="accessAid" ng-model="drug.week.night" />
+                            <label for="night">Night</label>
+                        </div>
+                    </div> -->
                     <label class="item item-input">
                         <input type="number" min="0" placeholder="Dosage" ng-model="drug.qty">
+                    </label>
+                    <label class="item item-input item-stacked-label">
+                        <span class="input-label">Description</span>
+                        <input type="text" placeholder="How to take" ng-model="apt.desc">
                     </label>
                     <div class="padding" style="margin-top:20px">
                         <div class="row">

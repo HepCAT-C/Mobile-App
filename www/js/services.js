@@ -1,11 +1,11 @@
 angular.module('app.services', ['app.config'])
 
+
 .factory('AuthenticationService', ['$http', 'baseUrl', function($http, baseUrl) {
 
 
     var service = {
-        baseUrl: baseUrl
-
+baseUrl: baseUrl
     };
 
     service.Login = function Login(username, password, callback) {
@@ -16,6 +16,8 @@ angular.module('app.services', ['app.config'])
             .success(function(response) {
                 callback(response);
             });
+
+        
     };
 
 
@@ -24,23 +26,13 @@ angular.module('app.services', ['app.config'])
 
 .factory('UserService', ['$http', 'baseUrl', function($http, baseUrl) {
 
-    function GetById(id) {
-        return $http.get(baseUrl + '/api/users/' + id).then(handleSuccess, handleError('Error getting user by id'));
-    }
+    function GetById(username,password) {
+            // return $http.get(baseUrl + '/api/getUsers/' + id);
+        return $http.post(baseUrl+'/api/getUsers',{
+            username: username,
+            password: password
+        });
 
-
-    // private functions
-    function handleSuccess(res) {
-        return res.data;
-    }
-
-    function handleError(error) {
-        return function() {
-            return {
-                success: false,
-                message: error
-            };
-        };
     }
 
     var service = {};
